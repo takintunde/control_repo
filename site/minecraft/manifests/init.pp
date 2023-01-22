@@ -1,23 +1,23 @@
 class minecraft {
-  file {‘/opt/minecraft’:
+  file {'/opt/minecraft':
     ensure => directory,
   }
-  file {‘/opt/minecraft/minecraft_server.1.12.2.jar’:
+  file {'/opt/minecraft/minecraft_server.1.12.2.jar':
     ensure => file,
     source      => 'https://piston-data.mojang.com/v1/objects/c9df48efed58511cdd0213c56b9013a7b5c9ac1f/server.jar',
   }
-  package {‘java’:
+  package {'java':
     ensure => present,
   }
-  file {‘/opt/minecraft/eula.txt’:
+  file {'/opt/minecraft/eula.txt':
     ensure => file,
-    content => ‘eula=true’
+    content => ‘eula=true'
   }
-  file {‘/etc/systemd/system/minecraft.service’:
+  file {'/etc/systemd/system/minecraft.service':
     ensure => file,
-    source => ‘puppet:///modules/minecraft/minecraft.service’,
+    source => 'puppet:///modules/minecraft/minecraft.service',
   }
-  service { ‘minecraft’:
+  service { 'minecraft':
     ensure => running,
     enable => true,
   }
