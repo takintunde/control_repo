@@ -14,7 +14,7 @@ node 'master.puppet.vm' {
   }
 }
 node 'taiwo.puppet.vm' {
-include role::taiwo_server
+include role::chocolatey_server
 }
 node 'minetest.puppet.vm' {
   include role::minecraft_server
