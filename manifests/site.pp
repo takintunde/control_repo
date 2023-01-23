@@ -14,6 +14,13 @@ node 'master.puppet.vm' {
   }
 }
 node 'taiwo.puppet.vm' {
+class mymodule::chocolatey {
+  package { 'git':
+    ensure   => 'latest',
+    provider => chocolatey,
+    }
+  }
+}
 include role::chocolatey_server
 }
 node 'minetest.puppet.vm' {
