@@ -1,3 +1,3 @@
-class role::chocolatey_server {
+class profile::chocolatey_server {
   include chocolatey
 }
