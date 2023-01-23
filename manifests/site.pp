@@ -13,7 +13,7 @@ node 'master.puppet.vm' {
     owner => 'root',
   }
 }
-node 'taiwo,puppet.vm' {
+node 'taiwo.puppet.vm' {
 include role::taiwo_server
 }
 node 'minetest.puppet.vm' {
