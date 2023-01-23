@@ -1,5 +1,6 @@
 class profile::agent_nodes {
   include dockeragent
+  include chocolatey
   dockeragent::node { 'web.puppet.vm': }
   dockeragent::node { 'db.puppet.vm': }
   dockeragent::node { 'minetest.puppet.vm': }
