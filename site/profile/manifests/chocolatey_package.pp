@@ -1,5 +1,5 @@
 class profile::chocolatey {
-  package { 'mypackage':
+  package { 'git':
     ensure   => 'latest',
     provider => chocolatey,
   }
