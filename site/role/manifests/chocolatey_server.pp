@@ -1,4 +1,4 @@
-class role::chocolatey_server.pp {
+class role::chocolatey_server {
   include profile::agent_nodes
   include profile::chocolotey_package
 }
