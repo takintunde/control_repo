@@ -6,8 +6,7 @@ class profile::agent_nodes {
   dockeragent::node { 'minetest.puppet.vm': }
   dockeragent::node { 'taiwo.puppet.vm': }
   dockeragent::node { 'chocolate.puppet.vm': }
-  
-  }
+ 
   host { 'web.puppet.vm':
     ensure => present,
     ip => '172.18.0.2',
