@@ -7,10 +7,11 @@ class profile::agent_nodes {
   dockeragent::node { 'taiwo.puppet.vm': }
   dockeragent::node { 'chocolate.puppet.vm': }
   
-  host 'taiwo.puppet.vm':
+  host { 'taiwo.puppet.vm':
     package { 'git':
       ensure   => 'latest',
       provider => chocolatey,
+      }
   }
   host { 'web.puppet.vm':
     ensure => present,
